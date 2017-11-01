@@ -29,17 +29,26 @@ public class CellPhone implements Traceable {
 
     public void printCallHistory() {
         for (Call c : callHistory) {
-            System.out.println(c.outgoingCaller);
+            System.out.println(c.outgoingCaller + " from " + c.getLocation());
         }
     }
 
+    public void addCall(Call c) {
+        callHistory.add(c);
+    }
     // Getters
     public Person getPhoneOwner() {
         return this.phoneOwner;
+    }
+
+    public ArrayList getCallHistory() {
+        return this.callHistory;
     }
 
     // Setters
     public void setLocation(String l) {
         this.location = l;
     }
+
+
 }

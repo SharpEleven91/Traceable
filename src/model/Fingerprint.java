@@ -5,9 +5,9 @@ public class Fingerprint implements Traceable {
     Person owner;
     String precinct;
 
-    public Fingerprint(Person p, String l) {
-        this.owner = p;
-        this.precinct = l;
+    public Fingerprint(Person person, String location) {
+        this.owner = person;
+        this.precinct = location;
         owner.setFingerprint(this);
     }
     @Override
